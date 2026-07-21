@@ -74,3 +74,18 @@ int main() {
 
     return 0;
 }
+/*
+PS A:\VIT Chennai\DSAA_01\DSA - Lab\Lab-01\
+Program-15-Merge-Two-Sorted-Arrays-Median> 
+& "A:\VIT Chennai\DSAA_01\DSA - Lab\Lab-01\
+Program-15-Merge-Two-Sorted-Arrays-Median\
+main.exe"
+Enter the size of the first array: 3
+Enter the elements of the first sorted array:
+54
+87
+90
+Enter the size of the second array: 1
+Enter the elements of the second sorted array:
+67
+Median of the merged arrays = 77.00*/
