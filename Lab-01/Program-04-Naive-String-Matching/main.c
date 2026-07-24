@@ -1,15 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main(){
-    char S[1000],T[100];
+#include <string.h>
 
-    int i,j;
+int main() {
+    char sentence[1000];
+    char word[100];
 
-    for(i = 0; i<len(T) ; i++){
-        for(j = 0; j<len(S) ; j++){
-            if(T[i] == S[j] && j  ){
-                continue;
-            }
-        }
+    printf("Enter the legal document text");
+    if(fgets(sentence, sizeof(sentence), stdin) == NULL) return 0;
+    printf("Enter the clause to search");
+    if(fgets(word, sizeof(word), stdin) == NULL) return 0;
+
+    sentence[strcspn(sentence, "\n")] = '\0';   // This block Removes newline characters
+    word[strcspn(word, "\n")] = '\0';
+
+    printf("The legal document text is: %s\n", sentence);
+
+    if (strstr(sentence, word) != NULL) {
+        printf("The word '%s' is present in the given sentence.", word);
+    } else {
+        printf("The word '%s' is not present in the given sentence.", word);
     }
+
+    return 0;
 }
